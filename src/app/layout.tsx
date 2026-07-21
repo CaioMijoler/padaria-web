@@ -22,6 +22,9 @@ export const metadata: Metadata = {
   title: "Pães São Sebastião | Tradição, sabor e qualidade desde 1950",
   description:
     "Website oficial e catálogo de produtos da Pães São Sebastião, unindo tradição, sabor e qualidade desde 1950.",
+  icons: {
+    icon: "/logo.png",
+  },
 };
 
 export default function RootLayout({

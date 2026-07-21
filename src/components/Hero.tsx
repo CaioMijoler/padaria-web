@@ -2,8 +2,14 @@
 
 import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { ArrowRight, ChevronDown, ChevronLeft, ChevronRight } from "lucide-react";
+import {
+  ArrowRight,
+  ChevronDown,
+  ChevronLeft,
+  ChevronRight,
+} from "lucide-react";
 import Container from "./Container";
+import Logo from "./Logo";
 
 interface CarouselImage {
   src: string;
@@ -35,7 +41,8 @@ export default function Hero() {
 
   const goToPrevious = () => {
     setActiveIndex(
-      (current) => (current - 1 + CAROUSEL_IMAGES.length) % CAROUSEL_IMAGES.length
+      (current) =>
+        (current - 1 + CAROUSEL_IMAGES.length) % CAROUSEL_IMAGES.length,
     );
   };
 
@@ -48,7 +55,8 @@ export default function Hero() {
     if (element) {
       const headerOffset = 80;
       const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+      const offsetPosition =
+        elementPosition + window.pageYOffset - headerOffset;
       window.scrollTo({
         top: offsetPosition,
         behavior: "smooth",
@@ -127,7 +135,8 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
           className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-[40px] font-extrabold tracking-tight leading-[1.15] mb-6 max-w-2xl drop-shadow-lg"
         >
-          Há mais de <span className="text-secondary-container">70 anos</span> levando tradição, sabor e qualidade para sua mesa.
+          Há mais de <span className="text-secondary-container">70 anos</span>{" "}
+          levando tradição, sabor e qualidade para sua mesa.
         </motion.h1>
 
         {/* Subtitle */}
@@ -137,7 +146,10 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 0.4, ease: "easeOut" }}
           className="font-sans text-gray-100 text-base md:text-lg lg:text-[18px] leading-relaxed max-w-2xl mb-10 drop-shadow-md"
         >
-          Com muito orgulho, somos a <span className="font-semibold text-white">Pães São Sebastião</span>. Descubra a verdadeira essência de produtos artesanais feitos com carinho, tradição e receitas rigorosamente selecionadas.
+          Com muito orgulho, somos a{" "}
+          <span className="font-semibold text-white">Pães São Sebastião</span>.
+          Descubra a verdadeira essência de produtos artesanais feitos com
+          carinho, tradição e receitas rigorosamente selecionadas.
         </motion.p>
 
         {/* Action Buttons */}
@@ -152,7 +164,10 @@ export default function Hero() {
             className="group flex items-center justify-center gap-2 bg-primary hover:bg-primary-hover text-white text-base font-display font-semibold px-8 py-4 rounded-full shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/40 transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0"
           >
             Conheça nossa História
-            <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+            <ArrowRight
+              size={18}
+              className="group-hover:translate-x-1 transition-transform"
+            />
           </button>
           <button
             onClick={() => handleScrollToSection("#produtos")}
@@ -186,7 +201,9 @@ export default function Hero() {
           className="flex flex-col items-center gap-1 text-white/50 hover:text-white transition-colors cursor-pointer group"
           aria-label="Scroll down"
         >
-          <span className="font-sans text-xs tracking-widest uppercase">Scroll</span>
+          <span className="font-sans text-xs tracking-widest uppercase">
+            Scroll
+          </span>
           <ChevronDown size={20} className="animate-bounce" />
         </button>
       </div>
