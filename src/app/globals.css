@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand palette — Pães São Sebastião */
+  --color-primary: #e21f26;
+  --color-primary-hover: #c41a20;
+  --color-primary-container: #fce3e4;
+
+  --color-secondary: #fdb913;
+  --color-secondary-hover: #e5a50c;
+  --color-secondary-container: #fdb913;
+  --color-on-secondary-container: #2b3282;
+
+  --color-tertiary: #2b3282;
+  --color-tertiary-hover: #232a6e;
+  --color-tertiary-container: #dde0f2;
+
+  --color-neutral: #faf9f6;
+  --color-surface-cream: #faf9f6;
+  --color-surface-cream-dim: #f2f1ed;
+  --color-surface-dark: #15151a;
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-montserrat), ui-sans-serif, system-ui, sans-serif;
+
+  --radius-xl: 1.5rem;
+  --radius-2xl: 2rem;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+
+  body {
+    background-color: var(--color-surface-cream);
+    color: var(--color-surface-dark);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+}
